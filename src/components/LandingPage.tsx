@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Carousel } from "react-bootstrap";
 import BBBReview from "@/assets/images/bbb-reviews.svg";
@@ -12,6 +12,12 @@ import ReviewRatingIcon from "@/assets/images/star-icon.svg";
 import CheckDoubleIcon from "@/assets/images/down-double-arrow-icon.svg";
 
 function LandingPage() {
+  const [showAllFeatures, setShowAllFeatures] = useState(false);
+
+  const toggleFeatures = () => {
+    setShowAllFeatures(!showAllFeatures);
+  };
+
   return (
     <>
       <main className="property-page">
@@ -272,7 +278,11 @@ function LandingPage() {
                       />{" "}
                       Personalized Call Transferring
                     </li>
-                    <li>
+                    <li
+                      className={
+                        !showAllFeatures ? "mobile-feature-hidden" : ""
+                      }
+                    >
                       <Image
                         src={CheckIcon}
                         alt="check icon"
@@ -281,7 +291,11 @@ function LandingPage() {
                       />{" "}
                       Business Phone/Fax Number
                     </li>
-                    <li>
+                    <li
+                      className={
+                        !showAllFeatures ? "mobile-feature-hidden" : ""
+                      }
+                    >
                       <Image
                         src={CheckIcon}
                         alt="check icon"
@@ -290,7 +304,11 @@ function LandingPage() {
                       />{" "}
                       Professional Mail Receipt
                     </li>
-                    <li>
+                    <li
+                      className={
+                        !showAllFeatures ? "mobile-feature-hidden" : ""
+                      }
+                    >
                       <Image
                         src={CheckIcon}
                         alt="check icon"
@@ -299,7 +317,11 @@ function LandingPage() {
                       />{" "}
                       Voicemail/Fax Converted to Email
                     </li>
-                    <li>
+                    <li
+                      className={
+                        !showAllFeatures ? "mobile-feature-hidden mb-0" : "" 
+                      }
+                    >
                       <Image
                         src={CheckIcon}
                         alt="check icon"
@@ -308,15 +330,26 @@ function LandingPage() {
                       />{" "}
                       Digital Mail Notifications by Mail X
                     </li>
-                    <a className="mobile-see-all-btn d-md-none">
+                    <button
+                      type="button"
+                      className="mobile-see-all-btn d-md-none "
+                      onClick={toggleFeatures}
+                      style={{ cursor: "pointer", background: "none", border: "none", padding: 0 }}
+                    >
                       <Image
                         src={CheckDoubleIcon}
                         alt="doublr check icon"
                         width={32}
                         height={32}
+                        style={{
+                          transform: showAllFeatures
+                            ? "rotate(180deg)"
+                            : "rotate(0deg)",
+                          transition: "transform 0.3s ease",
+                        }}
                       />{" "}
-                      See All Features
-                    </a>
+                      {showAllFeatures ? "See Less Features" : "See All Features"}
+                    </button>
                   </ul>
 
                   <p className="price-text">

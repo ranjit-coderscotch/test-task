@@ -538,11 +538,18 @@ ol {
     width: 24px;
     height: 24px;
   }
+  .property-page .property-card-list .property-list-content .feature-list li.mobile-feature-hidden {
+    display: none;
+  }
   .property-page .property-card-list .property-list-content .feature-list .mobile-see-all-btn {
     display: flex;
     align-items: center;
     font-size: 16px;
     gap: 12px;
+    cursor: pointer;
+    pointer-events: auto;
+    color: #475467;
+    font-weight: 400;
   }
   .property-page .property-card-list .property-list-content .feature-list .mobile-see-all-btn img {
     width: 24px;
