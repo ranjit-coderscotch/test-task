@@ -4,9 +4,11 @@ import { MapPin, Mail, Lock } from "lucide-react";
 import Image from "next/image";
 import { SearchInputForBusiness } from "@/app/components/prestigious-business/SearchInputForBusiness";
 import { MostPopularCities } from "@/app/components/prestigious-business/MostPopularCities";
-import LocationAddressIcon from '@/public/assets/locarion-map-icon.svg';
-import MailIcon from '@/public/assets/mail-box-icon.svg';
-import PrivacyIcon from '@/public/assets/profile-card-icon.svg';
+const LocationAddressIcon = '/assets/locarion-map-icon.svg';
+const MailIcon = '/assets/mail-box-icon.svg';
+const PrivacyIcon = '/assets/profile-card-icon.svg';
+import { GetYourOfficeSection } from "../components/prestigious-business/GetYourOfficeSection";
+import { FAQSection } from "../components/prestigious-business/FAQSection";
 
 export default function PrestigiousBusinessAddress() {
   const features = [
@@ -224,6 +226,33 @@ export default function PrestigiousBusinessAddress() {
             </div>
           </div>
         </section>
+
+        {/* Get Your Office Section */}
+        <GetYourOfficeSection />
+
+        {/* FAQ Section */}
+        <FAQSection
+          data={[
+            {
+              question: "How do I get started with a virtual business address from Opus?",
+              answer: "It's easy. Choose your city, sign up online in minutes, and start using your new address right away for registrations, websites, and marketing. Step-by-step guide here »",
+              linkText: "Step-by-step guide here »",
+              linkUrl: "#",
+            },
+            {
+              question: "What's the difference between a virtual business address and a P.O. Box?",
+              answer: "A virtual business address provides a real street address that you can use for business registrations, marketing, and official documents. Unlike a P.O. Box, it offers more credibility and can be used for LLC formations and business licenses.",
+            },
+            {
+              question: "Is a virtual business address suitable for remote entrepreneurs and freelancers?",
+              answer: "Absolutely! A virtual business address is perfect for remote workers, freelancers, and digital nomads who need a professional business address without the overhead of a physical office space.",
+            },
+            {
+              question: "How does a virtual business address help with business expansion and scalability?",
+              answer: "A virtual business address allows you to establish a presence in multiple cities without the cost of physical offices. This makes it easy to expand your business into new markets and scale your operations efficiently.",
+            },
+          ]}
+        />
 
       </div>
     </div>
