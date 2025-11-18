@@ -4,19 +4,22 @@ import { MapPin, Mail, Lock } from "lucide-react";
 import Image from "next/image";
 import { SearchInputForBusiness } from "@/app/components/prestigious-business/SearchInputForBusiness";
 import { MostPopularCities } from "@/app/components/prestigious-business/MostPopularCities";
+import LocationAddressIcon from '@/public/assets/locarion-map-icon.svg';
+import MailIcon from '@/public/assets/mail-box-icon.svg';
+import PrivacyIcon from '@/public/assets/profile-card-icon.svg';
 
 export default function PrestigiousBusinessAddress() {
   const features = [
     {
-      icon: MapPin,
+      icon: LocationAddressIcon,
       text: "Prestigious Business Address",
     },
     {
-      icon: Mail,
+      icon: MailIcon,
       text: "Professional Mail Receipt",
     },
     {
-      icon: Lock,
+      icon: PrivacyIcon,
       text: "Privacy & Safety",
     },
   ];
@@ -25,37 +28,58 @@ export default function PrestigiousBusinessAddress() {
     <div className="w-full flex pt-[72px] lg:pt-[104px]">
       <div className="flex w-full h-full flex-col items-start">
         {/* Business Address Hero */}
-        <section className="flex w-full bg-white py-6 sm:py-8 md:py-10 lg:py-12">
+        <section className="flex w-full bg-white py-6 sm md lg:pt-[40px] lg:pb-[60px]">
           <div className="flex w-full max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8">
             <div className="flex flex-col lg:flex-row w-full gap-[64px] items-end">
               {/* Left Section - Text and UI Elements */}
-              <div className="flex flex-col w-full lg:w-[613px] lg:h-[539.5px] py-12 md:py-16 lg:py-0 lg:justify-end">
+              <div className="flex w-full lg:w-[613px] lg:h-[539.5px] py-12 md:py-16 lg:py-0 lg:justify-end">
                 <div className="flex flex-col">
                   {/* Headline with Price */}
-                  <div className="flex flex-col mb-[12px]">
-                    <h2 className="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[48px] font-medium leading-[60px] tracking-[-0.02em] text-[#101828]">
+                  <div className="flex flex-col">
+                    <h2 className="text-[28px] sm:text-[32px] md:text-[40px] lg:text-[48px] font-medium leading-[60px] tracking-[-1px] text-[#101828] mb-[12px]  ">
                       Establish your corporate presence with a Business Address-Only {" "}
-                      <span className="text-[32px] sm:text-[36px] md:text-[44px] lg:text-[52px] font-bold text-blue-light400">
+                      <span className="text-[#0086C9]">
                         $59
                       </span>/mo
                     </h2>
                   </div>
 
                   {/* Description */}
-                  <p className="w-[550px] max-w-full min-h-[90px] text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[30px] tracking-[0%] text-gray-600 mb-[32px]">
-                    Secure a premier address for your business, boosting its image and privacy without sacrificing your convenience or security. No hidden fees.
+                  <p className="w-auto max-w-[560px] text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[30px] text-[#475467] mb-[32px]">
+                    Secure a premier address for your business, boosting  <br /> its image and privacy without sacrificing your convenience or security. No hidden fees.
                   </p>
 
                   {/* Features List */}
-                  <div className="flex flex-col gap-2 w-[613px] max-w-full h-[113.5px]">
+                  <div className="flex flex-col gap-[8px] w-full mb-[32px]">
                     {features.map((feature, index) => {
                       const IconComponent = feature.icon;
                       return (
-                        <div key={index} className="flex items-center gap-3">
-                          <div className="flex-shrink-0 w-6 h-6 text-blue-light400">
-                            <IconComponent className="w-5 h-5" />
+                        <div key={index} className="flex items-center gap-[10px]">
+                          <div className="flex-shrink-0">
+                            <Image
+                            src={feature.icon}
+                          
+                            alt={"location icon"}
+                            height={32.5}
+                            width={30}
+                            className="h-[32.5px]"
+                            />
+                            {/* <Image
+                            src={MailIcon}
+                            alt={"location icon"}
+                            height={32.5}
+                            width={30}
+                            className="h-[32.5px]"
+                            />
+                            <Image
+                            src={PrivacyIcon}
+                            alt={"location icon"}
+                            height={32.5}
+                            width={30}
+                            className="h-[32.5px]"
+                            /> */}
                           </div>
-                          <span className="text-[17.5px] font-normal leading-[25px] tracking-[0%] text-[#344054]">
+                          <span className="text-[17.5px] font-normal leading-[25px] text-[#344054]">
                             {feature.text}
                           </span>
                         </div>
