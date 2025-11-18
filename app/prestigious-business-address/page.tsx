@@ -34,7 +34,7 @@ export default function PrestigiousBusinessAddress() {
           <div className="flex w-full max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8">
             <div className="flex flex-col lg:flex-row w-full gap-[64px] items-end">
               {/* Left Section - Text and UI Elements */}
-              <div className="flex w-full lg:w-[613px] lg:h-[539.5px] py-12 md:py-16 lg:py-0 lg:justify-end">
+              <div className="flex w-full lg:w-[613px] py-12 md:py-16 lg:py-0 lg:justify-end">
                 <div className="flex flex-col">
                   {/* Headline with Price */}
                   <div className="flex flex-col">
@@ -60,26 +60,11 @@ export default function PrestigiousBusinessAddress() {
                           <div className="flex-shrink-0">
                             <Image
                             src={feature.icon}
-                          
                             alt={"location icon"}
                             height={32.5}
                             width={30}
                             className="h-[32.5px]"
                             />
-                            {/* <Image
-                            src={MailIcon}
-                            alt={"location icon"}
-                            height={32.5}
-                            width={30}
-                            className="h-[32.5px]"
-                            />
-                            <Image
-                            src={PrivacyIcon}
-                            alt={"location icon"}
-                            height={32.5}
-                            width={30}
-                            className="h-[32.5px]"
-                            /> */}
                           </div>
                           <span className="text-[17.5px] font-normal leading-[25px] text-[#344054]">
                             {feature.text}
@@ -115,11 +100,11 @@ export default function PrestigiousBusinessAddress() {
         <MostPopularCities />
 
         {/* Prestigious Corporate Business Address */}
-        <section className="flex w-full bg-white py-6 sm:py-8 md:py-10 lg:py-12">
+        <section className="flex w-full bg-white py-6 sm:py-8 md:py-10 lg:py-[60px]">
           <div className="flex w-full max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8">
             <div className="flex flex-col w-full">
-              <h2 className="font-inter font-semibold text-[36px] leading-[44px] tracking-[-0.02em] text-[#101828] mb-[36px]">
-                Prestigious Corporate Business Address
+              <h2 className="font-semibold text-[36px] leading-[44px] tracking-[-0.72px] text-[#101828] mb-[20px]">
+               Prestigious Corporate Business Address
               </h2>
               <div className="flex flex-col gap-[18px]">
                 <p className="font-inter font-normal text-[18px] leading-[28px] tracking-[0%] text-[#475467]">
