@@ -31,7 +31,7 @@ export function SearchInputForBusiness() {
         </button>
       </div>
       <div className="w-full flex">
-        <Link className="inline-flex" href="/our-top-locations/" prefetch={false}>
+        <Link className="inline-flex" href="#" prefetch={false}>
         <p className="cursor-pointer text-[14px] font-[700] text-[#475467] leading-[20px]  hover:text-[#475467]">
           Browse Our Top Locations
         </p>
