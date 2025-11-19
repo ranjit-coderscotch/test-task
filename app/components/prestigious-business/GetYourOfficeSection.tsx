@@ -14,11 +14,13 @@ export function GetYourOfficeSection() {
             <p className="text-[#B9E6FE] font-[700] text-[20px] leading-[30px] tracking-[0px] mb-[32px] lg:mb-[48px]">
               Business Address for only $59/Month <span className=" font-[400]">- No Hidden Fees</span>
             </p>
-            <Link href="#" prefetch={false} className="w-full sm:w-auto">
+            <div>
+              <Link href="#" prefetch={false} className="w-full sm:w-auto">
               <button className="w-full h-[48px] sm:w-auto py-[12px] px-[20px] min-w-[129px] bg-white text-[#344054] font-semibold text-[16px] rounded-[8px]">
                 Get started
               </button>
             </Link>
+            </div>
           </div>
 
           {/* Image Section */}

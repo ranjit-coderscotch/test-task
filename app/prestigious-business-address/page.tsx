@@ -42,7 +42,7 @@ export default function PrestigiousBusinessAddress() {
                 <div className="flex flex-col">
                   {/* Headline with Price */}
                   <div className="flex flex-col">
-                    <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-medium lg:tracking-[-1px] text-[#101828] mb-[12px] leading-[38px] md:leading-[44px] lg:leading-[60px]">
+                    <h2 className="text-[30px] md:text-[36px] lg:text-[48px] font-medium lg:tracking-[-0.96px] text-[#101828] mb-[12px] leading-[38px] md:leading-[44px] lg:leading-[60px]">
                       Establish your corporate presence with a Business Address-Only {" "}
                       <span className="text-[#0086C9]">
                         $59

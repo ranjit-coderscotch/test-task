@@ -25,7 +25,7 @@ export function SearchInputForBusiness() {
           </div>
         </div>
         <button
-          className="h-[48px] w-full sm:w-auto min-w-[129px] px-[20px] py-[12px] rounded-[8px] border border-solid border-[#36BFFA] bg-[#36BFFA] text-white shadow-none transition-colors hover:border-[#026aa2] hover:bg-[#026aa2] font-[600] text-[16px] sm:flex sm:items-center sm:justify-center whitespace-nowrap"
+          className="h-[48px] w-full sm:w-auto min-w-[129px] px-[20px] py-[12px] rounded-[8px] border border-solid border-[#36BFFA] bg-[#36BFFA] text-white shadow-none transition-colors hover:border-[#026aa2] hover:bg-[#026aa2] font-[600] text-[16px] hidden lg:flex sm:items-center sm:justify-center whitespace-nowrap "
         >
           Get started
         </button>
